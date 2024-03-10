@@ -2,7 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='h-screen bg-yellow-300'>
+    <section 
+      id='about'
+      className='h-screen bg-yellow-300'
+    >
       About
     </section>
   )
