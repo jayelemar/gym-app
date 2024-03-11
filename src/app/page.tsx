@@ -2,7 +2,7 @@ import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Brand from "@/components/Brand";
 import Classes from "@/components/Classes";
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero/Hero";
 import Membership from "@/components/Membership";
 import Team from "@/components/Team";
 import Testimonial from "@/components/Testimonial";
