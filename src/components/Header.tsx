@@ -32,13 +32,13 @@ const Header = () => {
   };
   
   return (
-    <header className={`${IsHeaderActive ? 'h-[100px]' : 'h-[124px]'} sticky max-w-[1920px] top-0 left-0 right-0 w-full bg-foreground h-[100px] transition-all`}>
+    <header className={`${IsHeaderActive ? 'h-[100px]' : 'h-[124px]'} sticky max-w-[1920px] top-0 left-0 right-0 w-full bg-foreground h-[100px] transition-all z-50`}>
       <div className="container mx-auto h-full flex justify-between items-center text-center">
         <Link href='/'>
           <Image src={logoImage} alt='logo' width={117} height={55}/>
         </Link>
         <Nav 
-          containerStyles='py-12 flex gap-6 hidden xl:flex' 
+          containerStyles='py-12 gap-6 hidden xl:flex' 
           linkStyles='cursor-pointer text-background hover:text-primary transition-all text-base uppercase font-medium'
           activeStyles='text-primary'
         />
