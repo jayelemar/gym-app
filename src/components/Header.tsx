@@ -52,7 +52,9 @@ const Header = () => {
 
         <div className="flex justify-center items-center gap-6 text-background">
           <Link href='/' className='hover:text-primary transition-all text-base uppercase font-medium'>Login</Link>
-          <Link href='/' className='hover:text-primary transition-all text-base uppercase font-medium'>Register</Link>
+          <Link href='/' className='hover:text-primary transition-all text-base uppercase font-medium'>
+            Register
+          </Link>
 
         <AlignJustify  
           className='text-background cursor-pointer xl:hidden' 
