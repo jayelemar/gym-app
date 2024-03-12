@@ -47,7 +47,7 @@ const HeroSlider = () => {
       <SwiperSlide>
         <div className='h-full flex justify-end pt-40'>
           <div className=" flex flex-col items-center lg:items-start lg:max-w-[700px]">
-            <motion.h1
+            <motion.h1 
               variants={fadeIn('up', 0.4)}
               initial='hidden'
               whileInView={'show'}
@@ -56,10 +56,23 @@ const HeroSlider = () => {
             >
               <span>Where hard</span> work meets success
             </motion.h1>
-            <p className='text-white italic text-center xl:text-left mb-4'>
+            <motion.p 
+              variants={fadeIn('up', 0.6)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{once:false, amount: 0.2}}
+              className='text-white italic text-center xl:text-left mb-4'
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, nihil deserunt. Reiciendis 
-            </p>
-            <CustomBtn text='Get Started' containerStyles='w-[196px] h-[62px]' />
+            </motion.p>
+            <motion.div
+              variants={fadeIn('up', .8)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{once:false, amount: 0.2}}
+            >
+              <CustomBtn text='Get Started' containerStyles='w-[196px] h-[62px]' />
+            </motion.div>
           </div>
         </div>
       </SwiperSlide>
