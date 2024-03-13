@@ -1,38 +1,12 @@
 'use client';
-
-import CountUp from "react-countup";
-import {FaBriefcase, FaClock, FaTrophy} from 'react-icons/fa'
-import { ImUser } from 'react-icons/im'
-
-import {motion, useInView} from 'framer-motion'
 import { useRef } from "react";
+import {motion, useInView} from 'framer-motion'
+import CountUp from "react-countup";
 import { statsContainerVariant, statsItem } from "@/lib/variants";
-
-const stats = [
-  {
-    number: 19,
-    icon: FaBriefcase,
-    text: 'training courses',
-  },
-  {
-    number: 879,
-    icon: FaClock,
-    text: 'working hours',
-  },
-  {
-    number: 150,
-    icon: FaTrophy,
-    text: 'international awards',
-  },
-  {
-    number: 9,
-    icon: ImUser,
-    text: 'happy customers',
-  },
-]
+import { stats } from "./about/AboutData";
 
 
-const Achievements = () => {
+const AboutAchievements = () => {
   const ref = useRef(null)
   const isInView = useInView(ref)
   return (
@@ -53,11 +27,11 @@ const Achievements = () => {
                 className="flex flex-col justify-center items-center mb-12"
               >
                 {/* circle outer */}
-                <div className="border border-primary/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6">
+                <div className="border border-primary w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6">
                   {/* circle inner @ count number */}
                   <div 
                     ref={ref}
-                    className="border border-primary/30 w-full h-full flex items-center justify-center text-center text-5xl rounded-full"
+                    className="border border-primary w-full h-full flex items-center justify-center text-center text-5xl rounded-full"
                   >
                     { isInView && <CountUp start={0} end={stat.number} duration={6} /> }
                   </div>
@@ -76,4 +50,4 @@ const Achievements = () => {
   )
 }
 
-export default Achievements
+export default AboutAchievements
