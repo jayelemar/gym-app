@@ -1,37 +1,14 @@
 'use client';
-
-import { FaUsers } from 'react-icons/fa'
-import { IoIosPricetags } from 'react-icons/io'
-import { FaDumbbell } from 'react-icons/fa6'
-
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/lib/variants';
-import Achievements from './Achievements';
-
-const featured = [
-  {
-    icon: <FaUsers />,
-    title: 'award-winning trainers',
-    subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident distinctio necessitatibus.' 
-  },
-  {
-    icon: <IoIosPricetags />,
-    title: 'excellent prices',
-    subtitle: '      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident distinctio necessitatibus.' 
-  },
-  {
-    icon: <FaDumbbell />,
-    title: 'modern equipments',
-    subtitle: '      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident distinctio necessitatibus.'
-  },
-
-]
+import { featured } from './AboutData';
+import AboutAchievements from '../AboutAchievements';
 
 const About = () => {
   return (
     <section 
       id='about'
-      className='pt-8 pb-14 lg:pt-16 lg:pb-28'
+      className='pt-8 pb-14 lg:pt-16 lg:pb-28 mb-12'
     >
       <div className="container mx-auto">
         <div className="flex flex-col items-center gap-2 mb-8">
@@ -79,7 +56,14 @@ const About = () => {
           })}
         </motion.div>
         {/* achievements */}
-        <Achievements />
+        <motion.div
+          variants={fadeIn('up', 1.2)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{once:false, amount: 0.2}}
+        >
+          <AboutAchievements />
+        </motion.div>
       </div>
     </section>
   )
